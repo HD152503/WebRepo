@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>헌혈 조건 체크</h1>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+function add( ) {
+	var a = document.getElementById("num1").value;
+	var b = document.getElementById("num2").value;
+if(document.getElementById("male").checked) {
+	if(var a>=16 && a<=69 ) {
+	if(var b>=50){
+		{document.getElementById("result").innerHTML= "신청 가능합니다";
+		return;
+		}
+		else{
+			{document.getElementById("result").innerHTML= "체중 미달";
+		}
+	}
+		else{
+			{document.getElementById("result").innerHTML= "연령 부적합";
+		}
+	}
+	
+	
+	
+}
+else if(document.getElementById("female").checked) {
+	if(var a>=16 && a<=69 ) {
+		
+		if(var b>=45){
+			{document.getElementById("result").innerHTML= "신청 가능합니다";
+			else{
+				{document.getElementById("result").innerHTML= "체중 미달";
+			}
+		}
+			else{
+				{document.getElementById("result").innerHTML= "연령 부적합";
+			}
+		}
+}
+}
+</script>
+
+<body>
+나이 :  <input type="text" id="num1" size="5" /> 세<br>
+성별 : 남자 <input type="radio"name="gender"id="male"checked> 여자 <input type="radio" name="gender"id="female"><br>
+몸무게 : <input type="text" id="num2" size="5" /> kg<br><br>
+<input type="button" onclick="add();" value="헌혈 조건 체크">
+<p id="result"></p>
+</body>
+</html>

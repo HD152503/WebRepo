@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/*  주석 */
+<style>* {color: blue;text-align: center;}
+h1{background-color: yellow;border: 2px solid;}
+h2{color: pink;text-align: right;}
+#text1{font-weight: bold;}
+.text2{font-style: italic}
+h1, h3 {text-decoration: underline;}</style>

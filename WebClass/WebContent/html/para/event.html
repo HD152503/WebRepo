@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이벤트와 객체 모델</title>
+<script>
+function changeColor(color) {
+	console.log(color);
+	var c = document.getElementById("container");
+	c.style.backgroundColor = color;
+}
+function toUpperCase(e) {
+	//var w = document.getElementById("word");
+	e.value  = e.value.toUpperCase();
+}
+function addBorder(e){
+	var x = document.getElementById("box");
+	e.style.border = "3px solid red";
+}
+function removeBorder(e){
+	var x = document.getElementById("box");
+	e.style.border = "";
+}
+</script>
+</head>
+<body onload="alert('웹 페이지 로딩됨');">
+<div id="container">
+<input type="radio" name="color" onclick="changeColor('pink');">로즈쿼츠
+<input type="radio" name="color" onclick="changeColor('skyblue');">세레니티
+<input type="radio" name="color" onclick="changeColor('white');">원래대로
+<br>
+<input type = "text" id = "word" onchange = "toUpperCase(this);">
+<br>
+<div id ="box" onmouseover = "addBorder(this);" onmouseout="removeBorder(this);">
+마우스를 위에 올려보세요
+</div>
+</div>
+</body>
+</html>
